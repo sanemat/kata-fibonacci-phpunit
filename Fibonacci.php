@@ -3,6 +3,9 @@ class Fibonacci{
   private $stored = array();
   public function number($number)
   {
+    if(array_key_exists($number, $this->stored)){
+      return $this->stored[$number];
+    }
     if ($number === 0) {
       $this->stored[$number] = 0;
       return 0;
