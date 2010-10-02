@@ -2,7 +2,11 @@
 class Fibonacci{
   public function number($number)
   {
-    return 0;
+    if ($number === 0) {
+      return 0;
+    } else {
+      return 1;
+    }
   }
 }
 ?>
