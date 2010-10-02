@@ -17,5 +17,10 @@ class FibonacciTest extends PHPUnit_Framework_TestCase
     $fib = new Fibonacci();
     $this->assertEquals(1, $fib->number(2), '2のとき1であること');
   }
+  public function testThree()
+  {
+    $fib = new Fibonacci();
+    $this->assertEquals(2, $fib->number(3), '3のとき2であること');
+  }
 }
 ?>
