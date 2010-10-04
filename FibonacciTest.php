@@ -30,7 +30,8 @@ class FibonacciTest extends PHPUnit_Framework_TestCase
   }
   public function testHundred()
   {
-    $this->assertTrue(strval(354224848179261915075) === strval($this->fib->number(100)), '100のときすごいおおきいこと', 1);
+    $this->assertTrue(function_exists('bccomp'), 'bccomp関数が使用できること');
+    $this->assertTrue(bccomp(354224848179261915075, $this->fib->number(100)) === 0, '100のときすごいおおきいこと');
   }
 }
 ?>
